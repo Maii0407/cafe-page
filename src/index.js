@@ -1,4 +1,4 @@
 import './style.css';
-import { createHeader } from './home';
+import {Home} from './home.js';
 
-createHeader();
+Home.createHome();
