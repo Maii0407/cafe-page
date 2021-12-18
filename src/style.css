@@ -6,13 +6,18 @@ body {
     background-size: cover;
 }
 
+#content {
+    display: flex;
+    justify-content: center;
+}
+
 .headerIcon {
     border-radius: 0 0 10px 10px;
     background-color: red;
     position: fixed;
     top: 0;
     left: 50px;
-    padding-top: 30px;
+    padding-top:15px;
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 20px;
@@ -29,8 +34,10 @@ body {
     margin: 10px;
     padding: 10px 10px 10px 10px;
     background-color: red;
+    color: white;
     cursor: pointer;
     font-size: 20px;
+    font-family: 'Permanent Marker', cursive;
     opacity: 1;
 }
 
@@ -38,4 +45,48 @@ body {
     background-color: white;
     outline: 1px solid red;
     color: red;
+}
+
+.mainCon-container {
+    background-color: rgba(255,0,0,0.70);
+    width: 80%;
+    height: 70%;
+    border: 1px solid red;
+    border-radius: 10px;
+    position: fixed;
+    top: 20%;
+    display: flex;
+    justify-content: center;
+}
+
+.main-img {
+    width: 50%;
+    height: 90%;
+    margin-top: 2%;
+    margin-left: 2%;
+    border-radius: 10px;
+}
+
+.description-container {
+    width: 50%;
+    height: 90%;
+    margin-top: 2%;
+}
+
+.description {
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 30px;
+}
+
+.footer-container {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(255,0,0,0.8);
+}
+
+.footer {
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
 }
