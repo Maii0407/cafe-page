@@ -1,4 +1,5 @@
 import './style.css';
 import {Home} from './home.js';
+import {Contact} from './contact.js'
 
-Home.createHome();
+Contact.createContact();

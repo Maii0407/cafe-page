@@ -95,6 +95,13 @@ const Home = (function(){
         footCon.appendChild(footText);
     }
 
+    //this section creates default header, navbar and footer for all tabs of the website
+    const createDefault = function(){
+        _createHeader();
+        _createNavBar();
+        _createFooter();
+    };
+
     //this section creates the homepage of the website by calling all the functions above
     const createHome = function(){
         _createHeader();
@@ -105,6 +112,7 @@ const Home = (function(){
         
     return{
         createHome,
+        createDefault,
     };
 
 })();
