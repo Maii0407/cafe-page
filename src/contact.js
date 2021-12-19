@@ -44,6 +44,30 @@ const Contact = (function(){
 
         headContainer.appendChild(CUheader);
 
+        //this section generates the cafe master cards based on mycafemasters array
+        for(let obj of _myCafeMasters){
+            let cmCard = document.createElement('div');
+            cmCard.classList.add('cafeMaster-card');
+
+            CUcon.appendChild(cmCard);
+
+            let cmCardHead = document.createElement('h1');
+            cmCardHead.textContent = obj.name;
+            cmCard.appendChild(cmCardHead);
+
+            let para1 = document.createElement('p');
+            let para2 =document.createElement('p');
+            let para3 = document.createElement('p');
+
+            para1.textContent = `${obj.branch} Branch ${obj.position}`;
+            para2.textContent = obj.phone;
+            para3.textContent = obj.email;
+
+            cmCard.appendChild(para1);
+            cmCard.appendChild(para2);
+            cmCard.appendChild(para3);
+        }
+
         return CUcon;
     }
 

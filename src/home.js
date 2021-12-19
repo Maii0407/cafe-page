@@ -99,7 +99,6 @@ const Home = (function(){
     const createDefault = function(){
         _createHeader();
         _createNavBar();
-        _createFooter();
     };
 
     //this section creates the homepage of the website by calling all the functions above
