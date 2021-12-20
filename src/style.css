@@ -1,3 +1,9 @@
+/*this is css for default.js*/
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 body {
     background: url(./cafe-bg.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -6,118 +12,72 @@ body {
     background-size: cover;
 }
 
-#content {
-    display: flex;
-    justify-content: center;
+footer {
+    height: 50px;
+    margin-top: -50px;
+    text-align: center;
+    border: 1px solid red;
+    line-height: 50px;
+    background-color: rgba(225, 0, 0, 0.8);
+    font-family: 'Permanent Marker', cursive;
+    
 }
 
-.headerIcon {
-    border-radius: 0 0 10px 10px;
-    background-color: red;
-    position: fixed;
-    top: 0;
-    left: 50px;
-    padding-top:15px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 20px;
+/*this is for upper container*/
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.upper-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.pokeIcon {
+    background-color: rgba(225, 0, 0, 0.8);
+    margin-left: 3%;
+    padding: 15px;
+    border-radius: 20px 0px;
+    border: 1px solid red;
 }
 
 .nav-container {
-    position: fixed;
-    right: 0;
+    margin-left: 43%;
+    margin-top: 1%;
+    display: flex;
+    justify-content: center;
 }
 
 .btn {
     border: none;
-    border-radius: 10px;
-    margin: 10px;
-    padding: 10px 10px 10px 10px;
     background-color: red;
-    color: white;
+    border: 1px solid red;
+    border-radius: 20px 0px;
+    color: black;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 2%;
     cursor: pointer;
-    font-size: 20px;
     font-family: 'Permanent Marker', cursive;
-    opacity: 1;
+    font-size: 20px;
 }
 
 .btn:hover {
     background-color: white;
-    outline: 1px solid red;
+    border: 1px solid red;
     color: red;
 }
 
-.mainCon-container {
-    background-color: rgba(255,0,0,0.70);
+.main-content {
+    background-color: rgba(225, 0, 0, 0.8);
+    border-radius: 10px;
     width: 80%;
-    height: 70%;
-    border: 1px solid red;
-    border-radius: 10px;
-    position: fixed;
-    top: 20%;
-    display: flex;
-    justify-content: center;
+    height: 1000px;
+    margin-top: 3%;
+    margin-bottom: 60px;
+    margin-left: 10%;
 }
 
-.main-img {
-    width: 50%;
-    height: 90%;
-    margin-top: 2%;
-    margin-left: 2%;
-    border-radius: 10px;
-}
-
-.description-container {
-    width: 50%;
-    height: 90%;
-    margin-top: 2%;
-}
-
-.description {
-    text-align: center;
-    font-family: 'Permanent Marker', cursive;
-    font-size: 30px;
-}
-
-.footer-container {
-    width: 100%;
-    background-color: rgba(255,0,0,0.8);
-}
-
-.footer {
-    text-align: center;
-    font-family: 'Permanent Marker', cursive;
-}
-
-.contactUs-container {
-    background-color: rgba(255,0,0,0.70);
-    width: 80%;
-    border: 1px solid red;
-    border-radius: 10px;
-    margin-top: 10%;
-}
-
-.CUheader-container {
-    width: 30%;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    display: flex;
-    justify-content: center;
-}
-
-.contactUs-header {
-    font-family: 'Permanent Marker', cursive;
-    font-size: 50px;
-    background-color: red;
-    color: white;
-    border: 1px solid white;
-    border-radius: 0px 20px;
-    padding: 5%;
-    text-align: center;
-}
-
-.cafeMaster-card {
-    background-color: white;
-    border: 1px solid black;
-    width: 50%;
-}
+/*css for home.js*/

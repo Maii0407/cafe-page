@@ -1,5 +1,5 @@
 import './style.css';
-import {Home} from './home.js';
+import { Default } from './default';
 import {Contact} from './contact.js'
 
-Contact.createContact();
+Default.makeDefault();
