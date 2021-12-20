@@ -19,6 +19,15 @@ const Default = (function(){
 
     container.appendChild(upperContainer);
 
+//this function makes a container div for content of the website
+    const mainContent = document.createElement('div');
+    mainContent.classList.add('main-content');
+
+    container.appendChild(mainContent);
+
+//this function makes a container div for content of the website
+
+
 //this section makes the cafe icon
     const _makeIcon = function(){
         const pokeIcon = new Image();
@@ -63,21 +72,10 @@ const Default = (function(){
         return navBarContainer;
     };
 
-//this function makes a container div for content of the website
-    const _makeMainContent = function(){
-        const mainContent = document.createElement('div');
-        mainContent.classList.add('main-content');
-
-        container.appendChild(mainContent);
-
-        return mainContent;
-    };
-
     const makeDefault = function(){
         _makeIcon();
         _makeNavBar();
-        _makeMainContent();
-    }
+    };
 
 
     return{

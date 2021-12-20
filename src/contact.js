@@ -1,11 +1,16 @@
-import { Home } from "./home";
+import { Default } from './default';
 import CafeMasterImg from './VSCafé_Master.png';
 
 
 const Contact = (function(){
-    const content = document.getElementById('content');
+    const mainContent = document.querySelector('.main-content');
 
-    //this section is the array and constructor for the cafe masters
+    const contactContainer = document.createElement('div');
+    contactContainer.classList.add('contact-container');
+
+    mainContent.appendChild(contactContainer);
+
+//this section is the array and constructor for the cafe masters
     const _myCafeMasters = [];
 
     class _CafeMaster {
@@ -24,27 +29,67 @@ const Contact = (function(){
 
     _myCafeMasters.push(dwight, bernard, richard);
 
-    //this makes the contacts us content
-    const _createContactUs = function(){
-        //this makes the container for the cafe master cards
-        const CUcon = document.createElement('div');
-        CUcon.classList.add('contactUs-container');
-
-        content.appendChild(CUcon);
-        
-        //this section makes the header
+//function below makes the header of contact us tab 
+    const _makeHeader = function(){
         const headContainer = document.createElement('div');
-        headContainer.classList.add('CUheader-container');
+        headContainer.classList.add('head-container');
 
-        CUcon.appendChild(headContainer);
+        contactContainer.appendChild(headContainer);
 
-        const CUheader = document.createElement('div');
-        CUheader.classList.add('contactUs-header');
-        CUheader.textContent = `Contact Us`;
+        const contactHeader = document.createElement('h1');
+        contactHeader.textContent = `CONTACT US`;
 
-        headContainer.appendChild(CUheader);
+        headContainer.appendChild(contactHeader);
 
-        //this section generates the cafe master cards based on mycafemasters array
+        return headContainer;
+    };
+
+    const _makeMasterCards = function(){
+        for(let obj of _myCafeMasters){
+            //makes the cafe master card container
+            let cardContainer = document.createElement('div');
+            cardContainer.classList.add('card-container');
+
+            contactContainer.appendChild(cardContainer);
+
+            //makes the text container inside the card container
+            let cardTextContainer = document.createElement('div');
+            cardTextContainer.classList.add('cardText-container');
+
+            cardContainer.appendChild(cardTextContainer);
+
+            let cardTextHeader = document.createElement('h1');
+            cardTextHeader.textContent = obj.name;
+
+            cardTextContainer.appendChild(cardTextHeader);
+
+            let para1 = document.createElement('p');
+            let para2 =document.createElement('p');
+            let para3 = document.createElement('p');
+
+            para1.textContent = `${obj.branch} Branch ${obj.position}`;
+            para2.textContent = obj.phone;
+            para3.textContent = obj.email;
+
+            cardTextContainer.appendChild(para1);
+            cardTextContainer.appendChild(para2);
+            cardTextContainer.appendChild(para3);
+            
+
+            //makes the img container inside the card container
+            let cardImgContainer = document.createElement('div');
+            cardImgContainer.classList.add('cardImg-container');
+
+            cardContainer.appendChild(cardImgContainer);
+
+            let masterImg = new Image();
+            masterImg.src = CafeMasterImg;
+            masterImg.classList.add('master-image');
+
+            cardImgContainer.appendChild(masterImg);
+        }
+    };
+/*    
         for(let obj of _myCafeMasters){
             let cmCard = document.createElement('div');
             cmCard.classList.add('cafeMaster-card');
@@ -69,17 +114,18 @@ const Contact = (function(){
         }
 
         return CUcon;
-    }
+    }*/
 
     //this section makes the contact tabs of the website
-    const createContact = function(){
-        Home.createDefault();
-        _createContactUs();
+    const makeContact = function(){
+        Default.makeDefault();
+        _makeHeader();
+        _makeMasterCards();
     };
 
 
     return{
-        createContact,
+        makeContact,
     };
 })();
 

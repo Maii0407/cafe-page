@@ -1,47 +1,49 @@
 import imgContent from './battle-cafe.png';
+import { Default } from './default';
 
 const Home = (function(){
-    
+    const mainContent = document.querySelector('.main-content');
 
-    //this sections makes the main content of the homepage of the website
-    const _createMainContent = function(){
-        //this makes the main content container
-        const mainCon = document.createElement('div');
-        mainCon.classList.add('mainCon-container');
+    const homeContainer = document.createElement('div');
+    homeContainer.classList.add('home-container');
 
-        content.appendChild(mainCon);
+    mainContent.appendChild(homeContainer);
 
-        //this makes the main image
+    const _insertMainImg = function(){
         const mainImg = new Image();
         mainImg.src = imgContent;
         mainImg.classList.add('main-img');
 
-        mainCon.appendChild(mainImg);
+        homeContainer.appendChild(mainImg);
 
-        //this makes the main description of the cafe
-        const mainDesc = document.createElement('div');
-        mainDesc.classList.add('description-container');
-
-        mainCon.appendChild(mainDesc);
-
-        const desc = document.createElement('div');
-        desc.classList.add('description');
-        desc.textContent = `The Pokémon Café is a chain of coffee shops located throughout the 
-                            Galar Region. Customers can visit to enjoy a variety of our finest 
-                            products. The Pokémon Café's design is based on UK's popular coffee 
-                            shops, Costa Coffee.`;
-        
-        mainDesc.appendChild(desc);
-
-        return mainCon;
+        return mainImg;
     };
 
-   
+    const _insertText = function(){
+        const textContainer = document.createElement('div');
+        textContainer.classList.add('text-container');
 
-    
-        
+        homeContainer.appendChild(textContainer);
+
+        const mainText = document.createElement('p');
+        mainText.textContent = `The Pokémon Café is a chain of coffee shops located throughout the 
+        Galar Region. Customers can visit to enjoy a variety of our finest 
+        products. The Pokémon Café's design is based on UK's popular coffee 
+        shops, Costa Coffee.`
+
+        textContainer.appendChild(mainText);
+
+        return textContainer;
+    };
+
+    const makeHome = function(){
+        Default.makeDefault();
+        _insertMainImg();
+        _insertText();
+    };
+      
     return{
-        
+        makeHome,
     };
 
 })();
