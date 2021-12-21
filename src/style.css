@@ -108,6 +108,7 @@ footer {
     text-align: center;
     font-family: 'Permanent Marker', cursive;
     font-size: 20px;
+    color: whitesmoke;
 }
 
 /*css for contact.js*/
@@ -117,27 +118,44 @@ footer {
 }
 
 .head-container {
-    background-color: white;
     display: flex;
     justify-content: center;
 }
 
 .head-container h1 {
     background-color: red;
-    width: 50%;
+    color: white;
+    padding: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
     text-align: center;
+    border: 1px solid white;
+    border-radius: 20px 0px;
+    font-family: 'Permanent Marker', cursive;
 }
 .card-container {
-    background-color: white;
+    background-color: red;
     width: 80%;
     margin-left: 9%;
+    margin-bottom: 3%;
     display: flex;
     flex-direction: row;
-    border: 1px solid black;
+    border: 1px solid white;
+    border-radius: 20px 0px;
 }
 
 .cardText-container {
     width: 50%;
+    font-family: 'Permanent Marker', cursive;
+    color: white;
+}
+
+.cardText-container h1 {
+    margin-left: 2%;
+}
+
+.cardText-container p {
+    margin-left: 2%;
 }
 
 .cardImg-container {
@@ -148,3 +166,5 @@ footer {
     width: 100%;
     height: 100%;
 }
+
+/*css for menu.js*/
