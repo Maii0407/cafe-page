@@ -27,9 +27,8 @@ const Home = (function(){
 
         const mainText = document.createElement('p');
         mainText.textContent = `The Pokémon Café is a chain of coffee shops located throughout the 
-        Galar Region. Customers can visit to enjoy a cup of coffee coupled with variety of our snacks
-        imported from all over the globe. The Pokémon Café's design is based on UK's popular coffee 
-        shops, Costa Coffee.`
+        Galar Region. Customers can visit to enjoy a variety of our products. The Pokémon Café's 
+        design is based on UK's popular coffee shops, Costa Coffee.`
 
         textContainer.appendChild(mainText);
 
