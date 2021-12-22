@@ -1,15 +1,20 @@
 import imgContent from './battle-cafe.png';
-import { Default } from './default';
+
 
 const Home = (function(){
-    const mainContent = document.querySelector('.main-content');
 
-    const homeContainer = document.createElement('div');
-    homeContainer.classList.add('home-container');
+    const _stepOne = function(){
+        const mainContent = document.querySelector('.main-content');
 
-    mainContent.appendChild(homeContainer);
+        const homeContainer = document.createElement('div');
+        homeContainer.classList.add('home-container');
+
+        mainContent.appendChild(homeContainer);
+    };
 
     const _insertMainImg = function(){
+        const homeContainer = document.querySelector('.home-container');
+
         const mainImg = new Image();
         mainImg.src = imgContent;
         mainImg.classList.add('main-img');
@@ -20,6 +25,8 @@ const Home = (function(){
     };
 
     const _insertText = function(){
+        const homeContainer = document.querySelector('.home-container');
+
         const textContainer = document.createElement('div');
         textContainer.classList.add('text-container');
 
@@ -36,7 +43,7 @@ const Home = (function(){
     };
 
     const makeHome = function(){
-        Default.makeDefault();
+        _stepOne();
         _insertMainImg();
         _insertText();
     };

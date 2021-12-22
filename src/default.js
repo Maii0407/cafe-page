@@ -1,5 +1,6 @@
 import Icon from './header.png';
 
+
 const Default = (function(){
     const content = document.getElementById('content');
 

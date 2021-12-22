@@ -1,14 +1,16 @@
-import { Default } from './default';
 import CafeMasterImg from './VSCafé_Master.png';
 
 
 const Contact = (function(){
-    const mainContent = document.querySelector('.main-content');
 
-    const contactContainer = document.createElement('div');
-    contactContainer.classList.add('contact-container');
+    const _stepOne = function(){
+        const mainContent = document.querySelector('.main-content');
 
-    mainContent.appendChild(contactContainer);
+        const contactContainer = document.createElement('div');
+        contactContainer.classList.add('contact-container');
+
+        mainContent.appendChild(contactContainer);
+    };
 
 //this section is the array and constructor for the cafe masters
     const _myCafeMasters = [];
@@ -31,6 +33,8 @@ const Contact = (function(){
 
 //function below makes the header of contact us tab 
     const _makeHeader = function(){
+        const contactContainer = document.querySelector('.contact-container');
+
         const headContainer = document.createElement('div');
         headContainer.classList.add('head-container');
 
@@ -45,6 +49,8 @@ const Contact = (function(){
     };
 
     const _makeMasterCards = function(){
+        const contactContainer = document.querySelector('.contact-container');
+
         for(let obj of _myCafeMasters){
             //makes the cafe master card container
             let cardContainer = document.createElement('div');
@@ -92,7 +98,7 @@ const Contact = (function(){
 
     //this section makes the contact tabs of the website
     const makeContact = function(){
-        Default.makeDefault();
+        _stepOne();
         _makeHeader();
         _makeMasterCards();
     };

@@ -1,4 +1,3 @@
-import { Default } from "./default";
 import eeveeLatteIcon from './menu-items/eevee-latte.png';
 import liligantTeaIcon from './menu-items/liligant-tea.png';
 import bunearyFrappeIcon from './menu-items/buneary-frappe.png';
@@ -13,14 +12,17 @@ import yamperPastaIcon from './menu-items/yamper-pasta.png';
 import torchicOmuriceIcon from './menu-items/torchic-omurice.png';
 
 const Menu = (function(){
-    const mainContent = document.querySelector('.main-content');
+    const _stepOne = function(){
+        const mainContent = document.querySelector('.main-content');
 
-    const menuContainer = document.createElement('div');
-    menuContainer.classList.add('menu-container');
-
-    mainContent.appendChild(menuContainer);
+        const menuContainer = document.createElement('div');
+        menuContainer.classList.add('menu-container');
+  
+        mainContent.appendChild(menuContainer);
+    };
 
     const _makeHeader = function(string){
+        const menuContainer = document.querySelector('.menu-container');
         const headContainer = document.createElement('div');
         headContainer.classList.add('head-container');
 
@@ -70,6 +72,8 @@ const Menu = (function(){
 
 //below is function that makes the menu based on name of array entered
     const _makeMenu = function(array){
+        const menuContainer = document.querySelector('.menu-container');
+        
         const menuItemContainer = document.createElement('div');
         menuItemContainer.classList.add('menuItem-container');
 
@@ -99,7 +103,7 @@ const Menu = (function(){
     };
 
     const makeMenu = function(){
-        Default.makeDefault();
+        _stepOne();
         _makeHeader('DRINKS');
         _makeMenu(_myDrinks);
         _makeHeader('DISHES');
